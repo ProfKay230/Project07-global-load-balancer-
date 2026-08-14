@@ -165,3 +165,36 @@ This demonstrated backend recovery and automatic re-entry into the load-balancin
 - How automatic failover improves application availability and resilience.
 - How to verify backend health and troubleshoot unhealthy instances.
 - 
+
+
+## Evidence
+
+### 1. Backend Health
+
+Both backend servers were confirmed healthy.
+
+![Both backends healthy](./Backend%20health.PNG)
+
+### 2. Traffic Distribution
+
+Multiple requests were sent through the public load balancer and reached both Web Server 1 and Web Server 2.
+
+![Traffic distribution](./traffic-distribution.png)
+
+### 3. Backend Failure
+
+Web Server 1 was deliberately made unhealthy while Web Server 2 remained healthy.
+
+![Backend failure](./Backend%20failure.PNG)
+
+### 4. Failover
+
+While Web Server 1 was unhealthy, traffic continued through Web Server 2.
+
+![Automatic failover](./Failover.PNG)
+
+### 5. Recovery
+
+Web Server 1 was restored and both backend servers returned to a healthy state.
+
+![Backend recovery](./Recovery.PNG)
